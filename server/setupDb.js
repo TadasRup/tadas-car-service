@@ -40,14 +40,15 @@ async function usersTable(db) {
 
 async function masterTable(db) {
     try {
-        const sql = `CREATE TABLE IF NOT EXISTS master (
+        const sql = `CREATE TABLE master (
             id int(10) NOT NULL AUTO_INCREMENT,
             name varchar(80) NOT NULL,
             lastname varchar(100) NOT NULL,
             specialization varchar(100) NOT NULL,
             cover varchar(200) NOT NULL,
-            service_id(10),
-            votes int(10), 
+            service_id int(10) NOT NULL,
+            votes int(10) NOT NULL,
+            service varchar(100) NOT NULL,
             city varchar(100) NOT NULL,
             PRIMARY KEY (id)
           ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci`;
