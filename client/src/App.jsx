@@ -5,6 +5,8 @@ import {PublicLayout} from './layout/PublicLayout';
 import {Register} from './pages/Register';
 import {Login} from './pages/Login';
 import {UserLayout} from "./layout/UserLayout";
+import {NoPage} from './pages/NoPage';
+import {NoPageLayout} from "./layout/NoPageLayout";
 import {MastersPageLayout} from "./layout/MastersPageLayout";
 
 
@@ -23,6 +25,9 @@ function App() {
                     </Route>
                     <Route Component={MastersPageLayout}>
                         <Route path='/masterspage' element={<MastersPageLayout/>}></Route>
+                    </Route>
+                    <Route Component={NoPageLayout}>
+                        <Route path='*' element={<NoPage/>}></Route>
                     </Route>
                </Routes>
            </BrowserRouter>

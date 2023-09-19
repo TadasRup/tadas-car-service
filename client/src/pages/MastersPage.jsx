@@ -128,7 +128,7 @@ export function MastersPage() {
             />
           </div>
 
-          <button type="submit" className="btn btn-success m-auto text-center ">
+          <button type="submit" className="btn btn-info m-auto text-center ">
             Submit
           </button>
         </form>
