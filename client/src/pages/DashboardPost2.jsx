@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import JonWick from "../assets/jonwick.jpg"
+import Wheel from "../assets/wheel.png"
 
-export function DashboardPost() {
+export function DashboardPost2() {
   const [likes, setLikes] = useState(9); 
   const [liked, setLiked] = useState(false); 
 
@@ -16,17 +16,18 @@ export function DashboardPost() {
     <div className="feature col text-center p-4 container bg bg-light border-4 border-info">
        <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
             </div>
-            <img src={JonWick} className="d-block img-fluid  mx-auto d-block py-1" alt="Bootstrap Themes"
+            <img src={Wheel} className="d-block img-fluid  mx-auto d-block py-1 round" alt="Bootstrap Themes"
                  width="150" height="200" loading="lazy"/>
-                <h3 className="fs-1 text-body-emphasis text-center">JON WICK</h3>
-                <p>Automechanic</p>
+                <h3 className="fs-1 text-body-emphasis text-center">JON BLUE</h3>
+                <p>Wheel booster</p>
             <div class="alert alert-info" role="alert">
-                From Kaunas
+                From Vilnius
             </div>
                 <div class="alert alert-warning" role="alert">
-                    OFFERING CAR BODY CLADDING JOB SERVICE 
+                    OFFERING CAR WHEEL BOOSTER JOB SERVICE 
             </div>
         <div>
+           
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
