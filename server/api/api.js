@@ -1,4 +1,5 @@
 import express from 'express';
+import { register } from './register.js';
 
 
 export const api = express.Router();
@@ -9,3 +10,5 @@ api.all('/', (req, res) => {
     });
 });
 
+
+api.use('/register', register);
