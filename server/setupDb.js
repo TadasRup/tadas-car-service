@@ -40,7 +40,7 @@ async function usersTable(db) {
 
 async function masterTable(db) {
     try {
-        const sql = `CREATE TABLE master (
+        const sql = `CREATE TABLE IF NOT EXISTS master (
             id int(10) NOT NULL AUTO_INCREMENT,
             name varchar(80) NOT NULL,
             lastname varchar(100) NOT NULL,
