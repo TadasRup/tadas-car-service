@@ -7,7 +7,7 @@ export function Header() {
             <div className="container">
             <h1 className="text-center text-white">CAR SERVICE</h1>
                 <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <div className="col-8 col-sm-4 col-lg-4"> </div>
+                    <div className="col-7 col-sm-1 col-lg-5"> </div>
                     
                     <div className="">
                         <Link to='/login' type="button" class="btn btn-outline-light me-2 text-dark ">Log in</Link>

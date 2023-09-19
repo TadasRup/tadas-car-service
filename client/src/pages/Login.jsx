@@ -85,9 +85,9 @@ export function Login() {
                                 Remember Me
                             </label>
                         </div>
-                        <button className="btn btn-warning w-100 py-2" type="submit">LOG IN</button>
+                        <button className="btn btn-info w-100 py-2" type="submit">LOG IN</button>
                         <p className="my-3 text-center text-body-secondary">OR</p>
-                        <Link to='/register' className="btn btn-outline-success w-100 py-2">REGISTER</Link>
+                        <Link to='/register' className="btn btn-outline-info w-100 py-2">REGISTER</Link>
                     </form>
                 </div>
             </div>
