@@ -46,15 +46,15 @@ async function masterTable(db) {
             lastname varchar(100) NOT NULL,
             specialization varchar(100) NOT NULL,
             cover varchar(200) NOT NULL,
-            service_id int(10) NOT NULL,
-            votes int(10) NOT NULL,
+            service_id int(10),
+            votes int(10),
             service varchar(100) NOT NULL,
             city varchar(100) NOT NULL,
             PRIMARY KEY (id)
           ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci`;
         await db.execute(sql);
     } catch (error) {
-        console.log('Nepavyko sukurti charity lenteles');
+        console.log('Nepavyko sukurti master lenteles');
         console.log(error);
         throw error;
     }
