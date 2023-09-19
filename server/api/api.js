@@ -1,6 +1,7 @@
 import express from 'express';
 import { register } from './register.js';
 import { login } from './login.js'
+import { masters } from './masters.js'
 
 
 
@@ -14,5 +15,4 @@ api.all('/', (req, res) => {
 
 api.use('/login', login);
 api.use('/register', register);
-
-
+api.use('/masters', masters);

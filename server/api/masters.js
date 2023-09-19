@@ -21,7 +21,7 @@ const upload = multer({
 
 const masters = express.Router();
 
-masters.get('/all', async (req, res) => {
+masters.get('/', async (req, res) => {
     try {
       const selectQuery = `SELECT * FROM master`;
       const [mastersData] = await connection.execute(selectQuery);
@@ -59,8 +59,4 @@ masters.post('/', upload.single('selectedPhoto'), async (req, res) => {
 };
 });
 
- 
-
-
-
-export default campaigns;
+export { masters };
