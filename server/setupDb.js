@@ -13,15 +13,15 @@ async function setupDb() {
     await connection.execute(`CREATE DATABASE IF NOT EXISTS \`${DB_DATABASE}\``);
     connection.query(`USE \`${DB_DATABASE}\``);
 
-  
     await usersTable(connection);
+    await masterTable(connection);
 
     return connection;
 }
 
 async function usersTable(db) {
     try {
-        const sql = `CREATE TABLE users (
+        const sql = `CREATE TABLE IF NOT EXISTS users (
             id int(10) NOT NULL AUTO_INCREMENT,
             username varchar(80) NOT NULL,
             email varchar(60) NOT NULL,
@@ -38,5 +38,23 @@ async function usersTable(db) {
     }
 }
 
-
+async function masterTable(db) {
+    try {
+        const sql = `CREATE TABLE master (
+            id int(10) NOT NULL AUTO_INCREMENT,
+            name varchar(80) NOT NULL,
+            lastname varchar(100) NOT NULL,
+            specialization varchar(100) NOT NULL,
+            cover varchar(200) NOT NULL,
+            service varchar(100) NOT NULL,
+            city varchar(100) NOT NULL,
+            PRIMARY KEY (id)
+          ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci`;
+        await db.execute(sql);
+    } catch (error) {
+        console.log('Nepavyko sukurti charity lenteles');
+        console.log(error);
+        throw error;
+    }
+}
 export const connection = await setupDb();
